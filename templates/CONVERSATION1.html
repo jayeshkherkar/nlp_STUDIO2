@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT Style UI</title>
+  <link rel="stylesheet" href="/static/css/CONVERSATION1.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">History</div>
+      <div class="menu"></div>
+    </aside>
+    <!-- Main Content -->
+    <main class="main">
+      <h1>What can I help with?</h1>
+      <div class="input-bar">
+        <form action='/perform_conversation_with_gpt' method='POST'> 
+            <input type="text" placeholder="Ask anything" name = "Prompt"/>
+            <div class="suggestions">
+            <button>Search</button>
+            <button>Reason</button>
+            <button>Deep research</button>
+            <button>Create image</button>
+            </div>
+        </form>
+    </div>
+    <button class="logout-btn">
+        <a href="/Features" class="fas fa-sign-out-alt",>Log out</a> 
+    </button>
+    {% if response %}
+    <div class="response" style="white-space: pre-wrap; word-wrap: break-word;">
+      <pre><code>{{ response | e }}</code></pre>
+    </div>
+    {% endif %}
+    
+    </main>
+  </div>
+</body>
+</html>

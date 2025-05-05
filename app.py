@@ -54,7 +54,7 @@ def NER():
 
 @app.route('/conversation')
 def Perform_conversation():
-    return render_template('conversation.html')
+    return render_template('CONVERSATION1.html')
 
 @app.route('/Back to features')  
 def back():
@@ -69,10 +69,10 @@ def Perform_ner():
 
 @app.route('/perform_conversation_with_gpt', methods=['POST'])
 def perform_conversation():
-    userinput = request.form.get('question')
+    userinput = request.form.get('Prompt')
     message = [{'role': 'user', 'content': userinput}]
-    response = gpt.gpt_35_api(message)
-    return response
+    response3 = gpt.gpt_35_api(message)
+    return render_template('CONVERSATION1.html', response = response3)
     
     
     

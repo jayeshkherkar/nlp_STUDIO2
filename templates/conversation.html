@@ -1,20 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ChatGPT Style Input</title>
-  <link rel="stylesheet" type="text/css" href="/static/css/conversation.css">
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/css/conversation_global.css" />
+    <link rel="stylesheet" href="/static/css/conversation.css" />
+  </head>
+  <body>
+    <div class="chat-dark">
+      <div class="chat-gpt-dark">
+        <div class="overlap">
+          <div class="navigation">
+            <div class="new-chat">
+              <div class="svg"></div>
+              <div class="text-wrapper">New chat</div>
+            </div>
+            <div class="clear-conversations">
+              <div class="div"></div>
+              <div class="text-wrapper">Clear conversations</div>
+            </div>
+            <div class="overlap-group">
+              <div class="dark-mode">
+                <div class="svg-2"></div>
+                <div class="text-wrapper">Dark mode</div>
+              </div>
+              <div class="openai-discord">
+                <div class="svg-3"></div>
+                <div class="text-wrapper">OpenAI Discord</div>
+              </div>
+            </div>
+            <div class="updates-FAQ">
+              <div class="svg-4"></div>
+              <div class="text-wrapper">Updates &amp; FAQ</div>
+            </div>
+            <div class="log-out">
+              <div class="svg-5"></div>
+              <div class="text-wrapper">Log out</div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="content-2">
+              <div class="text-wrapper-2">ChatGPT</div>
+              <div class="sections">
+                <div class="div-2">
+                  <div class="h">
+                    <div class="svg-6"></div>
+                    <div class="text-wrapper-3">Examples</div>
+                  </div>
+                  <div class="ul">
+                    <div class="div-wrapper">
+                      <p class="explain-quantum">&#34;Explain quantum computing in simple terms&#34; →</p>
+                    </div>
+                    <div class="div-wrapper-2">
+                      <p class="got-any-creative">&#34;Got any creative ideas for a 10 year old’s birthday?&#34; →</p>
+                    </div>
+                    <div class="div-wrapper-3">
+                      <p class="how-do-i-make-an">&#34;How do I make an HTTP request in Javascript?&#34; →</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="div-2">
+                  <div class="h-2">
+                    <div class="svg-7"></div>
+                    <div class="text-wrapper-4">Capabilities</div>
+                  </div>
+                  <div class="ul">
+                    <div class="div-wrapper"><p class="p">Remembers what user said earlier in the conversation</p></div>
+                    <div class="div-wrapper-2">
+                      <p class="text-wrapper-5">Allows user to provide follow-up corrections</p>
+                    </div>
+                    <div class="div-wrapper-3">
+                      <p class="text-wrapper-6">Trained to decline inappropriate requests</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="div-2">
+                  <div class="h-3">
+                    <div class="svg-8"></div>
+                    <div class="text-wrapper-3">Limitations</div>
+                  </div>
+                  <div class="ul-2">
+                    <div class="div-wrapper">
+                      <p class="text-wrapper-7">May occasionally generate incorrect information</p>
+                    </div>
+                    <div class="li">
+                      <p class="text-wrapper-8">May occasionally produce harmful instructions or biased content</p>
+                    </div>
+                    <div class="li-2">
+                      <p class="text-wrapper-6">Limited knowledge of world and events after 2021</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img class="nlp-logo" src="img/nlp-logo-2-1.png" />
+            </div>
+          </div>
+          <footer class="footer">
+            <div class="prompt">
 
-  <form action="/perform_conversation_with_gpt" method="POST" class="input-container">
-    <input type="text" name="question" placeholder="Ask anything..." required />
-    <button type="submit">
-      <!-- Send icon (you can change to mic or something else) -->
-      <svg fill="black" viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
-    </button>
-  </form>
-
-</body>
+              <div class="field"> 
+                <form action='/Perform_NER' method='POST'>
+                    <input name = "Entity_Jo_Search_karni_he"/>
+                    <div class="frame-wrapper"><img class="frame" src="img/frame-2.svg" /></div>    
+                </form> 
+              </div>     
+            </div>
+            <p class="chatgpt-jan">
+              <span class="span">ChatGPT Jan 9 Version</span>
+              <span class="text-wrapper-9"
+                >. Free Research Preview. Our goal is to make AI systems more natural and safe to interact with. Your
+                feedback will help us improve.</span
+              >
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
